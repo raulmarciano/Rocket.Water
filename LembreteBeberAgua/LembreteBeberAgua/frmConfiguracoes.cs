@@ -14,6 +14,28 @@ namespace LembreteBeberAgua
         {
             InitializeComponent();
         }
+
+        private void frmConfiguracoes_Load(object sender, EventArgs e)
+        {
+            string tempoNotificacao = Properties.Settings.Default.TempoNotificacaoAgua;
+
+            cbxTempoNotificacao.DataSource = new string[] {"5", "10", "15", "30", "45", "60"};
+            cbxTempoNotificacao.SelectedItem = tempoNotificacao;
+
+            ContextMenu contextMenu = new ContextMenu();
+            contextMenu.MenuItems.Add(new MenuItem("Configurações", AbrirConfiguracoes_Click));
+            contextMenu.MenuItems.Add(new MenuItem("Fechar", Fechar_Click));
+            icnBandeja.ContextMenu = contextMenu;
+
+            tmrNotificacaoAgua.Interval = Convert.ToInt32(tempoNotificacao) * 60000;
+            tmrNotificacaoAgua.Enabled = true;
+
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true))
+            {
+                chkIniciarComWindows.Checked = key.GetValue(caminho) != null;
+            }
+        }
+
         private void chkIniciarComWindows_CheckedChanged(object sender, EventArgs e)
         {
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true))
