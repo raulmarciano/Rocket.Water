@@ -14,5 +14,15 @@ namespace LembreteBeberAgua
         {
             InitializeComponent();
         }
+        private void chkIniciarComWindows_CheckedChanged(object sender, EventArgs e)
+        {
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true))
+            {
+                if (chkIniciarComWindows.Checked)
+                    key.SetValue(caminho, $"\"{Application.ExecutablePath}\"");
+                else
+                    key.DeleteValue(caminho, false);
+            }
+        }
     }
 }
