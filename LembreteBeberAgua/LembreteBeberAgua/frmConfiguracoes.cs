@@ -42,5 +42,11 @@ namespace LembreteBeberAgua
             e.Cancel = manterAplicacaoAberta;
             base.OnFormClosing(e);
         }
+
+        private void tmrNotificacaoAgua_Tick(object sender, EventArgs e)
+        {
+            icnBandeja.ShowBalloonTip(8, "Lembrete Para Beber Água", "Está na hora de beber água!", ToolTipIcon.Info);
+        }
+
     }
 }
