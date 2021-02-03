@@ -24,5 +24,23 @@ namespace LembreteBeberAgua
                     key.DeleteValue(caminho, false);
             }
         }
+
+        private void Fechar_Click(object sender, EventArgs e)
+        {
+            manterAplicacaoAberta = false;
+            this.Close();
+        }
+
+        private void AbrirConfiguracoes_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = manterAplicacaoAberta;
+            base.OnFormClosing(e);
+        }
     }
 }
