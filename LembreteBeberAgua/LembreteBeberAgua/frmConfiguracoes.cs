@@ -48,5 +48,12 @@ namespace LembreteBeberAgua
             icnBandeja.ShowBalloonTip(8, "Lembrete Para Beber Água", "Está na hora de beber água!", ToolTipIcon.Info);
         }
 
+        private void cbxTempoNotificacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tempoNotificacao = (string)cbxTempoNotificacao.SelectedItem;
+            tmrNotificacaoAgua.Interval = Convert.ToInt32(tempoNotificacao) * 60000;
+            Properties.Settings.Default.TempoNotificacaoAgua = tempoNotificacao;
+            Properties.Settings.Default.Save();
+        }
     }
 }
