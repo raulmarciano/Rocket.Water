@@ -21,26 +21,26 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_93694E75555E45518D070F174308569A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_CAAC55F82C74443C14EC6023C066773E"
         "OwnerKey" = "8:_6D533F1E9C6C47A188BFC9E5A19FD388"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F837B5D8CC2943948B683DA5AA9F94CA"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6D533F1E9C6C47A188BFC9E5A19FD388"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_CAAC55F82C74443C14EC6023C066773E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6D533F1E9C6C47A188BFC9E5A19FD388"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -100,6 +100,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -130,6 +138,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_93694E75555E45518D070F174308569A"
+            {
+            "SourcePath" = "8:..\\LembreteBeberAgua\\Resources\\water.ico"
+            "TargetName" = "8:water.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_3E9402F939284BC197CAA80EE9A0E3DE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CAAC55F82C74443C14EC6023C066773E"
             {
             "AssemblyRegister" = "3:1"
@@ -159,26 +187,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F837B5D8CC2943948B683DA5AA9F94CA"
-            {
-            "SourcePath" = "8:H:\\OneDrive\\Downloads\\water.ico"
-            "TargetName" = "8:water.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_3E9402F939284BC197CAA80EE9A0E3DE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -249,7 +257,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Lembrete Beber Agua"
         "ProductCode" = "8:{58CECB29-73E4-49A8-A4F9-173A9FDEC3F6}"
-        "PackageCode" = "8:{D139B068-7C4D-46E1-B925-D9A36352C9EF}"
+        "PackageCode" = "8:{1C0E01FB-F556-43FA-B6B2-10CD011A674A}"
         "UpgradeCode" = "8:{7F9E2598-74BF-48F2-AFFA-06839EE791B6}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -266,7 +274,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Lembrete Para Beber Água"
         "ARPURLINFOABOUT" = "8:https://github.com/raulmarciano"
-        "ARPPRODUCTICON" = "8:_F837B5D8CC2943948B683DA5AA9F94CA"
+        "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -380,7 +388,7 @@
             "Target" = "8:_6D533F1E9C6C47A188BFC9E5A19FD388"
             "Folder" = "8:_DC4E810344EB44E2BA167BAB4BD2B7A0"
             "WorkingFolder" = "8:_3E9402F939284BC197CAA80EE9A0E3DE"
-            "Icon" = "8:_F837B5D8CC2943948B683DA5AA9F94CA"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DD93A73CF3264D3A8D326461270212F1"
@@ -394,7 +402,7 @@
             "Target" = "8:_6D533F1E9C6C47A188BFC9E5A19FD388"
             "Folder" = "8:_2278B6EB542B41E48F6D279346E5C759"
             "WorkingFolder" = "8:_3E9402F939284BC197CAA80EE9A0E3DE"
-            "Icon" = "8:_F837B5D8CC2943948B683DA5AA9F94CA"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
