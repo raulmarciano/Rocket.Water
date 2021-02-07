@@ -73,7 +73,7 @@ namespace LembreteBeberAgua
             this.groupBox1.Controls.Add(this.lblTempoNotificacao);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(323, 90);
+            this.groupBox1.Size = new System.Drawing.Size(289, 90);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configurações";
@@ -97,13 +97,12 @@ namespace LembreteBeberAgua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 114);
+            this.ClientSize = new System.Drawing.Size(314, 114);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(362, 153);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(362, 153);
             this.Name = "frmConfiguracoes";
             this.Text = "Configurações do lembrete para beber água";
             this.Load += new System.EventHandler(this.frmConfiguracoes_Load);

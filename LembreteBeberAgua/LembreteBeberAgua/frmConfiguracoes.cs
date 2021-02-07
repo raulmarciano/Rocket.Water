@@ -67,7 +67,7 @@ namespace LembreteBeberAgua
 
         private void tmrNotificacaoAgua_Tick(object sender, EventArgs e)
         {
-            icnBandeja.ShowBalloonTip(8, "Lembrete Para Beber Água", "Está na hora de beber água!", ToolTipIcon.Info);
+            icnBandeja.ShowBalloonTip(7000, "Tome água", "Está na hora de beber água!", ToolTipIcon.Info);
         }
 
         private void cbxTempoNotificacao_SelectedIndexChanged(object sender, EventArgs e)
