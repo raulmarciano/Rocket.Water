@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Runtime.Versioning;
 using System.Windows.Forms;
 
 namespace LembreteBeberAgua
@@ -15,6 +16,7 @@ namespace LembreteBeberAgua
             InitializeComponent();
         }
 
+        [SupportedOSPlatform("windows")]
         private void FrmConfiguracoes_Load(object sender, EventArgs e)
         {
             string tempoNotificacao = Properties.Settings.Default.TempoNotificacaoAgua;
@@ -40,6 +42,7 @@ namespace LembreteBeberAgua
             chkIniciarComWindows.Checked = key.GetValue(caminho) != null;
         }
 
+        [SupportedOSPlatform("windows")]
         private void ChkIniciarComWindows_CheckedChanged(object sender, EventArgs e)
         {
             using RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true);
