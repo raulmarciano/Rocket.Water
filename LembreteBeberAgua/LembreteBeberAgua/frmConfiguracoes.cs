@@ -1,50 +1,55 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Runtime.Versioning;
 using System.Windows.Forms;
 
 namespace LembreteBeberAgua
 {
-    public partial class frmConfiguracoes : Form
+    public partial class FrmConfiguracoes : Form
     {
         private bool manterAplicacaoAberta = true;
         private readonly string caminho = @"C:\Program Files (x86)\Lembrete Beber Agua\LembreteAgua.exe";
         private readonly string subKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
 
-        public frmConfiguracoes()
+        public FrmConfiguracoes()
         {
             InitializeComponent();
         }
 
-        private void frmConfiguracoes_Load(object sender, EventArgs e)
+        [SupportedOSPlatform("windows")]
+        private void FrmConfiguracoes_Load(object sender, EventArgs e)
         {
             string tempoNotificacao = Properties.Settings.Default.TempoNotificacaoAgua;
 
-            cbxTempoNotificacao.DataSource = new string[] {"5", "10", "15", "30", "45", "60"};
+            cbxTempoNotificacao.DataSource = new string[] { "5", "10", "15", "30", "45", "60" };
             cbxTempoNotificacao.SelectedItem = tempoNotificacao;
 
-            ContextMenu contextMenu = new ContextMenu();
-            contextMenu.MenuItems.Add(new MenuItem("Configurações", AbrirConfiguracoes_Click));
-            contextMenu.MenuItems.Add(new MenuItem("Fechar", Fechar_Click));
-            icnBandeja.ContextMenu = contextMenu;
+            ToolStripMenuItem[] menus = new ToolStripMenuItem[]
+            {
+                new ToolStripMenuItem("Configurações", null, AbrirConfiguracoes_Click),
+                new ToolStripMenuItem("Fechar", null, Fechar_Click)
+            };
+
+            ContextMenuStrip contextMenu = new();
+
+            contextMenu.Items.AddRange(menus);
+            icnBandeja.ContextMenuStrip = contextMenu;
 
             tmrNotificacaoAgua.Interval = Convert.ToInt32(tempoNotificacao) * 60000;
             tmrNotificacaoAgua.Enabled = true;
 
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true))
-            {
-                chkIniciarComWindows.Checked = key.GetValue(caminho) != null;
-            }
+            using RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true);
+            chkIniciarComWindows.Checked = key.GetValue(caminho) != null;
         }
 
-        private void chkIniciarComWindows_CheckedChanged(object sender, EventArgs e)
+        [SupportedOSPlatform("windows")]
+        private void ChkIniciarComWindows_CheckedChanged(object sender, EventArgs e)
         {
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true))
-            {
-                if (chkIniciarComWindows.Checked)
-                    key.SetValue(caminho, $"\"{Application.ExecutablePath}\"");
-                else
-                    key.DeleteValue(caminho, false);
-            }
+            using RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true);
+            if (chkIniciarComWindows.Checked)
+                key.SetValue(caminho, $"\"{Application.ExecutablePath}\"");
+            else
+                key.DeleteValue(caminho, false);
         }
 
         private void Fechar_Click(object sender, EventArgs e)
@@ -65,12 +70,12 @@ namespace LembreteBeberAgua
             base.OnFormClosing(e);
         }
 
-        private void tmrNotificacaoAgua_Tick(object sender, EventArgs e)
+        private void TmrNotificacaoAgua_Tick(object sender, EventArgs e)
         {
             icnBandeja.ShowBalloonTip(7000, "Tome água", "Está na hora de beber água!", ToolTipIcon.Info);
         }
 
-        private void cbxTempoNotificacao_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbxTempoNotificacao_SelectedIndexChanged(object sender, EventArgs e)
         {
             string tempoNotificacao = (string)cbxTempoNotificacao.SelectedItem;
             tmrNotificacaoAgua.Interval = Convert.ToInt32(tempoNotificacao) * 60000;

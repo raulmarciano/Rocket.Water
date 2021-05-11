@@ -1,7 +1,7 @@
 ﻿
 namespace LembreteBeberAgua
 {
-    partial class frmConfiguracoes
+    partial class FrmConfiguracoes
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace LembreteBeberAgua
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfiguracoes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfiguracoes));
             this.icnBandeja = new System.Windows.Forms.NotifyIcon(this.components);
             this.cbxTempoNotificacao = new System.Windows.Forms.ComboBox();
             this.lblTempoNotificacao = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@ namespace LembreteBeberAgua
             this.cbxTempoNotificacao.Name = "cbxTempoNotificacao";
             this.cbxTempoNotificacao.Size = new System.Drawing.Size(136, 21);
             this.cbxTempoNotificacao.TabIndex = 0;
-            this.cbxTempoNotificacao.SelectedIndexChanged += new System.EventHandler(this.cbxTempoNotificacao_SelectedIndexChanged);
+            this.cbxTempoNotificacao.SelectedIndexChanged += new System.EventHandler(this.CbxTempoNotificacao_SelectedIndexChanged);
             // 
             // lblTempoNotificacao
             // 
@@ -87,11 +87,11 @@ namespace LembreteBeberAgua
             this.chkIniciarComWindows.TabIndex = 2;
             this.chkIniciarComWindows.Text = "Iniciar com o Windows";
             this.chkIniciarComWindows.UseVisualStyleBackColor = true;
-            this.chkIniciarComWindows.CheckedChanged += new System.EventHandler(this.chkIniciarComWindows_CheckedChanged);
+            this.chkIniciarComWindows.CheckedChanged += new System.EventHandler(this.ChkIniciarComWindows_CheckedChanged);
             // 
             // tmrNotificacaoAgua
             // 
-            this.tmrNotificacaoAgua.Tick += new System.EventHandler(this.tmrNotificacaoAgua_Tick);
+            this.tmrNotificacaoAgua.Tick += new System.EventHandler(this.TmrNotificacaoAgua_Tick);
             // 
             // frmConfiguracoes
             // 
@@ -105,7 +105,7 @@ namespace LembreteBeberAgua
             this.MinimizeBox = false;
             this.Name = "frmConfiguracoes";
             this.Text = "Configurações do lembrete para beber água";
-            this.Load += new System.EventHandler(this.frmConfiguracoes_Load);
+            this.Load += new System.EventHandler(this.FrmConfiguracoes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
