@@ -19,7 +19,7 @@ namespace LembreteBeberAgua
         {
             string tempoNotificacao = Properties.Settings.Default.TempoNotificacaoAgua;
 
-            cbxTempoNotificacao.DataSource = new string[] {"5", "10", "15", "30", "45", "60"};
+            cbxTempoNotificacao.DataSource = new string[] { "5", "10", "15", "30", "45", "60" };
             cbxTempoNotificacao.SelectedItem = tempoNotificacao;
 
             ContextMenu contextMenu = new ContextMenu();
