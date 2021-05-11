@@ -36,21 +36,17 @@ namespace LembreteBeberAgua
             tmrNotificacaoAgua.Interval = Convert.ToInt32(tempoNotificacao) * 60000;
             tmrNotificacaoAgua.Enabled = true;
 
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true))
-            {
-                chkIniciarComWindows.Checked = key.GetValue(caminho) != null;
-            }
+            using RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true);
+            chkIniciarComWindows.Checked = key.GetValue(caminho) != null;
         }
 
         private void ChkIniciarComWindows_CheckedChanged(object sender, EventArgs e)
         {
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true))
-            {
-                if (chkIniciarComWindows.Checked)
-                    key.SetValue(caminho, $"\"{Application.ExecutablePath}\"");
-                else
-                    key.DeleteValue(caminho, false);
-            }
+            using RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true);
+            if (chkIniciarComWindows.Checked)
+                key.SetValue(caminho, $"\"{Application.ExecutablePath}\"");
+            else
+                key.DeleteValue(caminho, false);
         }
 
         private void Fechar_Click(object sender, EventArgs e)
