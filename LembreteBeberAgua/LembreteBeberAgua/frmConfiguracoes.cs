@@ -4,18 +4,18 @@ using System.Windows.Forms;
 
 namespace LembreteBeberAgua
 {
-    public partial class frmConfiguracoes : Form
+    public partial class FrmConfiguracoes : Form
     {
         private bool manterAplicacaoAberta = true;
         private readonly string caminho = @"C:\Program Files (x86)\Lembrete Beber Agua\LembreteAgua.exe";
         private readonly string subKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
 
-        public frmConfiguracoes()
+        public FrmConfiguracoes()
         {
             InitializeComponent();
         }
 
-        private void frmConfiguracoes_Load(object sender, EventArgs e)
+        private void FrmConfiguracoes_Load(object sender, EventArgs e)
         {
             string tempoNotificacao = Properties.Settings.Default.TempoNotificacaoAgua;
 
@@ -42,7 +42,7 @@ namespace LembreteBeberAgua
             }
         }
 
-        private void chkIniciarComWindows_CheckedChanged(object sender, EventArgs e)
+        private void ChkIniciarComWindows_CheckedChanged(object sender, EventArgs e)
         {
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true))
             {
@@ -71,12 +71,12 @@ namespace LembreteBeberAgua
             base.OnFormClosing(e);
         }
 
-        private void tmrNotificacaoAgua_Tick(object sender, EventArgs e)
+        private void TmrNotificacaoAgua_Tick(object sender, EventArgs e)
         {
             icnBandeja.ShowBalloonTip(7000, "Tome água", "Está na hora de beber água!", ToolTipIcon.Info);
         }
 
-        private void cbxTempoNotificacao_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbxTempoNotificacao_SelectedIndexChanged(object sender, EventArgs e)
         {
             string tempoNotificacao = (string)cbxTempoNotificacao.SelectedItem;
             tmrNotificacaoAgua.Interval = Convert.ToInt32(tempoNotificacao) * 60000;
