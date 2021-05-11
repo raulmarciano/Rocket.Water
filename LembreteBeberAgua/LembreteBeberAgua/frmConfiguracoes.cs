@@ -22,13 +22,13 @@ namespace LembreteBeberAgua
             cbxTempoNotificacao.DataSource = new string[] { "5", "10", "15", "30", "45", "60" };
             cbxTempoNotificacao.SelectedItem = tempoNotificacao;
 
-            ContextMenuStrip contextMenu = new ContextMenuStrip();
-
             ToolStripMenuItem[] menus = new ToolStripMenuItem[]
             {
                 new ToolStripMenuItem("Configurações", null, AbrirConfiguracoes_Click),
                 new ToolStripMenuItem("Fechar", null, Fechar_Click)
             };
+
+            ContextMenuStrip contextMenu = new();
 
             contextMenu.Items.AddRange(menus);
             icnBandeja.ContextMenuStrip = contextMenu;
