@@ -51,18 +51,20 @@ namespace LembreteBeberAgua
             // 
             this.cbxTempoNotificacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTempoNotificacao.FormattingEnabled = true;
-            this.cbxTempoNotificacao.Location = new System.Drawing.Point(135, 24);
+            this.cbxTempoNotificacao.Location = new System.Drawing.Point(158, 28);
+            this.cbxTempoNotificacao.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbxTempoNotificacao.Name = "cbxTempoNotificacao";
-            this.cbxTempoNotificacao.Size = new System.Drawing.Size(136, 21);
+            this.cbxTempoNotificacao.Size = new System.Drawing.Size(158, 23);
             this.cbxTempoNotificacao.TabIndex = 0;
             this.cbxTempoNotificacao.SelectedIndexChanged += new System.EventHandler(this.CbxTempoNotificacao_SelectedIndexChanged);
             // 
             // lblTempoNotificacao
             // 
             this.lblTempoNotificacao.AutoSize = true;
-            this.lblTempoNotificacao.Location = new System.Drawing.Point(6, 27);
+            this.lblTempoNotificacao.Location = new System.Drawing.Point(7, 31);
+            this.lblTempoNotificacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTempoNotificacao.Name = "lblTempoNotificacao";
-            this.lblTempoNotificacao.Size = new System.Drawing.Size(123, 13);
+            this.lblTempoNotificacao.Size = new System.Drawing.Size(139, 15);
             this.lblTempoNotificacao.TabIndex = 1;
             this.lblTempoNotificacao.Text = "Minutos para notificação";
             // 
@@ -71,9 +73,11 @@ namespace LembreteBeberAgua
             this.groupBox1.Controls.Add(this.chkIniciarComWindows);
             this.groupBox1.Controls.Add(this.cbxTempoNotificacao);
             this.groupBox1.Controls.Add(this.lblTempoNotificacao);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(14, 14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(289, 90);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Size = new System.Drawing.Size(337, 104);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configurações";
@@ -81,9 +85,10 @@ namespace LembreteBeberAgua
             // chkIniciarComWindows
             // 
             this.chkIniciarComWindows.AutoSize = true;
-            this.chkIniciarComWindows.Location = new System.Drawing.Point(135, 51);
+            this.chkIniciarComWindows.Location = new System.Drawing.Point(158, 59);
+            this.chkIniciarComWindows.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chkIniciarComWindows.Name = "chkIniciarComWindows";
-            this.chkIniciarComWindows.Size = new System.Drawing.Size(133, 17);
+            this.chkIniciarComWindows.Size = new System.Drawing.Size(147, 19);
             this.chkIniciarComWindows.TabIndex = 2;
             this.chkIniciarComWindows.Text = "Iniciar com o Windows";
             this.chkIniciarComWindows.UseVisualStyleBackColor = true;
@@ -93,18 +98,19 @@ namespace LembreteBeberAgua
             // 
             this.tmrNotificacaoAgua.Tick += new System.EventHandler(this.TmrNotificacaoAgua_Tick);
             // 
-            // frmConfiguracoes
+            // FrmConfiguracoes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 114);
+            this.ClientSize = new System.Drawing.Size(366, 132);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmConfiguracoes";
-            this.Text = "Configurações do lembrete para beber água";
+            this.Name = "FrmConfiguracoes";
+            this.Text = "Rocket Water";
             this.Load += new System.EventHandler(this.FrmConfiguracoes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
