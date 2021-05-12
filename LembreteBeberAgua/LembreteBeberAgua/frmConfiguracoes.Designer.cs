@@ -1,5 +1,5 @@
 ﻿
-namespace LembreteBeberAgua
+namespace Rocket.Water
 {
     partial class FrmConfiguracoes
     {

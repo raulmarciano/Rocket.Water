@@ -3,7 +3,7 @@ using System;
 using System.Runtime.Versioning;
 using System.Windows.Forms;
 
-namespace LembreteBeberAgua
+namespace Rocket.Water
 {
     public partial class FrmConfiguracoes : Form
     {
