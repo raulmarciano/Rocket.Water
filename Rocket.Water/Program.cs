@@ -3,15 +3,15 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace LembreteBeberAgua
+namespace Rocket.Water
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Process processoAtual = Process.GetCurrentProcess();
 
@@ -23,7 +23,7 @@ namespace LembreteBeberAgua
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmConfiguracoes());
+            Application.Run(new FrmConfiguracoes());
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LembreteBeberAgua.Properties {
+namespace Rocket.Water.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
