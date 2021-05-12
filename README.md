@@ -1,4 +1,4 @@
-# Lembrete Beber Agua
+# Rocket Water
 
 Aplicação para avisar o usuário de tempo em tempo (programável) para tomar água.
 
