@@ -2,4 +2,4 @@
 
 Aplicação para avisar o usuário de tempo em tempo (programável) para tomar água.
 
-![image](https://user-images.githubusercontent.com/57970226/106689805-613cf880-65af-11eb-8331-1f0b2c0ad4c5.png)
+![image](https://user-images.githubusercontent.com/57970226/118005226-94b2c000-b320-11eb-9239-307cb7c4bc6d.png)
