@@ -8,7 +8,7 @@ namespace Rocket.Water
     public partial class FrmConfiguracoes : Form
     {
         private bool manterAplicacaoAberta = true;
-        private readonly string caminho = @"C:\Program Files (x86)\Lembrete Beber Agua\LembreteAgua.exe";
+        private readonly string caminho = @"C:\Program Files (x86)\Rocket Water\Rocket Water.exe";
         private readonly string subKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
 
         public FrmConfiguracoes()
