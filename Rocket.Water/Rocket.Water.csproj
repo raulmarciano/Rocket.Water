@@ -1,13 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net5.0-windows</TargetFramework>
+		<TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<ApplicationIcon>water_ico.ico</ApplicationIcon>
 		<RootNamespace>Rocket.Water</RootNamespace>
 		<Authors>Raul Gustavo Marciano - Github: raulmarciano</Authors>
 		<AssemblyName>Rocket.Water</AssemblyName>
+		<SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Update="Properties\Settings.Designer.cs">

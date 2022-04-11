@@ -1,5 +1,8 @@
-# Lembrete Beber Agua
+# Rocker Water
 
-Aplicação para avisar o usuário de tempo em tempo (programável) para tomar água.
+Windows Forms application for notifications reminding you to drink water.
 
-![image](https://user-images.githubusercontent.com/57970226/106689805-613cf880-65af-11eb-8331-1f0b2c0ad4c5.png)
+.NET Version: 6
+Language: English
+
+![image](https://user-images.githubusercontent.com/57970226/162831044-ac4a13d1-b03e-43ac-bfd3-3a4b93c8b448.png)
