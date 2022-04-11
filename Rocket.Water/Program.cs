@@ -13,17 +13,17 @@ namespace Rocket.Water
         [STAThread]
         private static void Main()
         {
-            Process processoAtual = Process.GetCurrentProcess();
+            Process process = Process.GetCurrentProcess();
 
-            if (Process.GetProcessesByName(processoAtual.ProcessName).Any(p => p.Id != processoAtual.Id && !p.HasExited))
+            if (Process.GetProcessesByName(process.ProcessName).Any(p => p.Id != process.Id && !p.HasExited))
             {
-                MessageBox.Show("O aplicativo já está em execução!", "Já está em execução");
+                MessageBox.Show("Rock Water is already running!", "Information");
                 Process.GetCurrentProcess().Kill();
             }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmConfiguracoes());
+            Application.Run(new FrmSettings());
         }
     }
 }
