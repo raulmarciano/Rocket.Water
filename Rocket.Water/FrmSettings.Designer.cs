@@ -56,7 +56,7 @@ namespace Rocket.Water
             this.cbxNotificationTime.Name = "cbxNotificationTime";
             this.cbxNotificationTime.Size = new System.Drawing.Size(128, 23);
             this.cbxNotificationTime.TabIndex = 0;
-            this.cbxNotificationTime.SelectedIndexChanged += new System.EventHandler(this.CbxTempoNotificacao_SelectedIndexChanged);
+            this.cbxNotificationTime.SelectedIndexChanged += new System.EventHandler(this.CbxTimeNotification_SelectedIndexChanged);
             // 
             // lblNotificationTime
             // 
@@ -92,7 +92,7 @@ namespace Rocket.Water
             this.chkStartWithWindows.TabIndex = 2;
             this.chkStartWithWindows.Text = "Start with Windows";
             this.chkStartWithWindows.UseVisualStyleBackColor = true;
-            this.chkStartWithWindows.CheckedChanged += new System.EventHandler(this.ChkIniciarComWindows_CheckedChanged);
+            this.chkStartWithWindows.CheckedChanged += new System.EventHandler(this.ChkStartWithWindows_CheckedChanged);
             // 
             // tmrNotificacaoAgua
             // 

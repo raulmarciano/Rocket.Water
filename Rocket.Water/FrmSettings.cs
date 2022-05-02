@@ -44,7 +44,7 @@ namespace Rocket.Water
         }
 
         [SupportedOSPlatform("windows")]
-        private void ChkIniciarComWindows_CheckedChanged(object sender, EventArgs e)
+        private void ChkStartWithWindows_CheckedChanged(object sender, EventArgs e)
         {
             using RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true);
             if (chkStartWithWindows.Checked)
@@ -76,7 +76,7 @@ namespace Rocket.Water
             systemTray.ShowBalloonTip(7000, "Drink Water", "It's time to drink water!", ToolTipIcon.Info);
         }
 
-        private void CbxTempoNotificacao_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbxTimeNotification_SelectedIndexChanged(object sender, EventArgs e)
         {
             string notificationTime = (string)cbxNotificationTime.SelectedItem;
             tmrNotificationTime.Interval = Convert.ToInt32(notificationTime) * numberConvertToMinutes;
