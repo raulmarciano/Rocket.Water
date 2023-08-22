@@ -47,6 +47,7 @@ namespace Rocket.Water
         private void ChkStartWithWindows_CheckedChanged(object sender, EventArgs e)
         {
             using RegistryKey key = Registry.CurrentUser.OpenSubKey(subKey, true);
+
             if (chkStartWithWindows.Checked)
                 key.SetValue(path, $"\"{Application.ExecutablePath}\"");
             else
@@ -80,6 +81,7 @@ namespace Rocket.Water
         {
             string notificationTime = (string)cbxNotificationTime.SelectedItem;
             tmrNotificationTime.Interval = Convert.ToInt32(notificationTime) * numberConvertToMinutes;
+
             Properties.Settings.Default.NotificationTimeDrinkWater = notificationTime;
             Properties.Settings.Default.Save();
         }
