@@ -2,7 +2,7 @@
 
 Windows Forms application for notifications reminding you to drink water.
 
-.NET Version: 6
+.NET Version: 7
 
 Language: English
 
